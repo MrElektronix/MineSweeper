@@ -1,13 +1,12 @@
 class Sprite extends Object {
-  constructor(x, y, width, height, sprite, context) {
-    super(x, y, width, height, context);
+  constructor(sprite, x, y, width, height) {
+    super(x, y, width, height);
     this.sprite = sprite;
-    this.image;
-    this.src;
   }
 
-  drawSprite() {
-    this.context.drawImage(this.sprite, this.x, this.y, this.width, this.height);
+  draw() {
+	console.log(this.sprite);
+    //this.context.drawImage(this.sprite, this.x, this.y, this.width, this.height);
   }
 
 }

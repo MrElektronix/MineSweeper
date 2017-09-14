@@ -3,8 +3,7 @@ body{
 }
 
 #canvas {
-	background-color: grey;
-	border: solid white 2px;
+	background-color: white;
 	margin: 0 auto;
 	display: block;
 }

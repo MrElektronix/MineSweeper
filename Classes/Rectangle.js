@@ -17,25 +17,27 @@ class Rectangle extends Object {
   }
 
   draw(context) {
-    if (this.remove) {
-      
-    } else{
-      
-        if (this.filled) {
-        context.fillStyle = this.color;
-        context.fillRect(this.x, this.y, this.width, this.height);
-      } else {
-        context.rect(this.x, this.y, this.width, this.height);
-        context.stroke();
-      }
+	if (this.remove) {
+
+	} else{
+
+		if (this.filled) {
+		context.fillStyle = this.color;
+		context.fillRect(this.x, this.y, this.width, this.height);	
+
+		} else {
+			context.beginPath();
+			context.strokeStyle = this.color;	
+			context.strokeRect(this.x, this.y, this.width, this.height);
+		}
 
 
-      if (this.selected) {
-        context.lineWidth = 4;
-        context.strokeRect(this.x, this.y, this.width, this.height);
-      }
-    }
-    
+		if (this.selected) {
+		context.lineWidth = 4;
+		context.strokeRect(this.x, this.y, this.width, this.height);
+		}
+	}
+
   }
 
 }
